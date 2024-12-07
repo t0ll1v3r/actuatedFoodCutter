@@ -2,7 +2,6 @@
 #define EXTEND_H
 
 #include "Globals.h"
-//#include "Sense/Sense.h"
 #include "Sense.h"
 
 #include <Arduino.h>
