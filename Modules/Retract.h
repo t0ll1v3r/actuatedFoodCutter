@@ -2,6 +2,7 @@
 #define RETRACT_H
 
 #include "Globals.h"
+#include "Sense.h"
 #include <Arduino.h>
 
 void Retract() {
