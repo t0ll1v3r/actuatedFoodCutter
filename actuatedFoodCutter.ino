@@ -68,7 +68,6 @@ void setup() {
 
 void loop() {
   while (digitalRead(switchOnOff) == HIGH) {  // wait for switch to be turned on
-    // Serial.println("waiting for switch...");
     delay(100);
   }
   
