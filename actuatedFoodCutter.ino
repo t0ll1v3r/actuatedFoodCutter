@@ -26,6 +26,7 @@ const int ledGreen = 6;       // output to toggle green LED
 const int ledRed = 7;         // output to toggle red LED
 const int ledOrange = 8;      // output to toggle oragne LED
 
+// define variables/constants
 double userDistance;          // variable to hold the distance between the device and the user
 bool firstTime = true;        // variable to check if this is the first extention since the switch has been turned on
 const int timeLimit = 10000;   // constant to dictate the duration of the actuator's extention phase
