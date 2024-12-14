@@ -6,7 +6,7 @@ To alert the user of the functioning of the device, the Arduino Uno board is als
   
 To use the device, the user will first turn the device on by turning the switch to ON. The actuators, which are stored fully retracted, will immediately extend to their maximum height. Once they reach their peak, the LED will turn from orange to green and the user can place a fruit on top of the blades. When ready, the user will press the activation button and step away from the device. Once the distance sensor verifies the user is an appropriate distance from the device, the actuators will begin retracting, pushing the fruit through the blades. The actuators will immediately extend again once they are fully retracted, returning to their maximum height so the process can be repeated as needed. When the user is done with the device, they can simply flick the switch OFF. The actuators (while still checking for the safety conditions) will immediately attempt to retract to reach the smallest size possible for storage. Once they are fully retracted, the LED indicators will turn off, and the device is ready for storage.
 
-Below is the circuit diagram for the device. Not shown are the 6 output pins to the motor drivers, 4 digital outputs to drive extension and retraction, and 2 analog outputs to control the speed.
+Below is the circuit diagram for the device. Not shown in the diagram are the 6 output pins to the motor drivers- 4 digital outputs to drive extension and retraction + 2 analog outputs to control the speed.
 <img width="1144" alt="circuitDiagram" src="https://github.com/user-attachments/assets/406c97e3-43d7-4707-924c-3769e92cbaa9">
 
 Click [here](https://youtu.be/YY8EpCqgCA0) to watch a brief demonstration of the program working with a single linear actuator.
