@@ -6,6 +6,7 @@
 #include "Modules/FullExtend.h"
 #include "Modules/FullRetract.h"
 #include "Modules/OffState.h"
+#include "Modules/StartupSequence.h"
 // #include "Modules/Pause.h"
 
 // define pins
@@ -26,7 +27,6 @@ const int ledGreen = 6;       // output to toggle green LED
 const int ledRed = 7;         // output to toggle red LED
 const int ledOrange = 8;      // output to toggle oragne LED
 
-// define variables/constants
 double userDistance;          // variable to hold the distance between the device and the user
 bool firstTime = true;        // variable to check if this is the first extention since the switch has been turned on
 const int timeLimit = 10000;   // constant to dictate the duration of the actuator's extention phase
@@ -72,20 +72,9 @@ void loop() {
   }
   
   while (digitalRead(switchOnOff) == LOW) { // loop continues as long as the switch is on
-    if (firstTime == true) {  // startup sequence to fully extend the actuators, will only run the first time the switch is turned on
-      FullExtend();
-    }
-
-    if (digitalRead(switchOnOff) == HIGH) { // if the device is switched off at any point, break the loop
-      break;
-    }
-    Retract();
-
-    if (digitalRead(switchOnOff) == HIGH) { // if the device is switched off at any point, break the loop
-      break;
-    }
-    Extend();
-
+    if (StartupSequence()) break;
+    if (Retract()) break;
+    if (Extend()) break;
   }
 
   OffState(); // the device reaches this state when it is switched off, will stay until switched on again
