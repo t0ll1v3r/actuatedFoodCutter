@@ -1,5 +1,4 @@
-This simplified branch significantly reduces the amount of clutter in the top Arduino module, as well as removes some of the redundancy with the on-off switch logic. I have yet to test it with the linear actuators, so I'm leaving it as a branch (hopefully temporarily). The remainder of the readme is identical:
---------------------------------------------
+*This "Simplified" branch reduces the amount of clutter in the top Arduino module, as well as removes some of the redundancy with the on-off switch logic. It compiles in Arduino IDE, but I have yet to test it with the linear actuators. I'm leaving it as a branch (hopefully temporarily) until I'm able to verify it still operates the actuators correctly. The remainder of the readme is identical:*
 
 The Sensor-Enhanced Mechanical Fruit Cutter is an assistive device designed to enable individuals with limited fine motor skills to easily cut fruits. The primary goals for designing and manufacturing this product were to ensure ease of use and maintenance while adhering to a budget of $200 and maintaining a size comparable to a shoebox.
   
